@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/SpringBootRequestMethod" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Springboot-quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBootFromManual/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringbootConfigFile/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBootRequestMethod/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBootElementExample/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringbootMybatisDemo/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/SpringBootRequestMethod/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="graalvm-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,10 @@
+# Spring修改
+spring:
+  application:
+    name: Springboot-quickstart
+
+# 服务器端修改
+server:
+  port: 9090
+  servlet:
+    context-path: /start
