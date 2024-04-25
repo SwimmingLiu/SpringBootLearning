@@ -3,6 +3,9 @@ package com.swimmingliu.springbootmybatisdemo.mapper;
 import com.swimmingliu.springbootmybatisdemo.pojo.Emp;
 import org.apache.ibatis.annotations.*;
 
+import java.time.LocalDate;
+import java.util.List;
+
 @Mapper
 public interface EmpMapper {
 
@@ -44,4 +47,10 @@ public interface EmpMapper {
     // 方案三: 直接yml配置文件 设置 map-underscore-to-camel-case: true
     @Select("select * from emp where id = #{id}")
     public Emp getEmpById(Integer id);
+
+    // 5. 按条件查询员工信息
+    @Select("select * from emp where name like concat('%',#{name},'%') and gender = #{gender} " +
+            "and entrydate between #{start} and #{end}")
+
+    public List<Emp> getEmpByCondition(String name, Short gender, LocalDate start, LocalDate end);
 }

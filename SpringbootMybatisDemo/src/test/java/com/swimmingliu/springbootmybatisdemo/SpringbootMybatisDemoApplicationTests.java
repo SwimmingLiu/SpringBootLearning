@@ -23,7 +23,7 @@ class SpringbootMybatisDemoApplicationTests {
     private EmpMapper empMapper;
 
     @Test
-    public void getAllUser(){
+    public void getAllUser() {
         List<User> userList = userMapper.getUser();
         userList.stream().forEach(user -> {
             System.out.println(user);
@@ -32,21 +32,21 @@ class SpringbootMybatisDemoApplicationTests {
 
     @Test
     // 删除指定员工信息
-    public void deleteEmp(){
+    public void deleteEmp() {
         Integer id = 21;
         empMapper.deleteEmpById(id);
     }
 
     @Test
     // 添加员工信息
-    public void addEmp(){
+    public void addEmp() {
         Emp emp = new Emp();
         emp.setUsername("swimmingliu");
         emp.setName("YongjieLiu");
         emp.setImage("swimmingliu.jpg");
-        emp.setGender((short)1);
-        emp.setJob((short)1);
-        emp.setEntrydate(LocalDate.of(2024,4,25));
+        emp.setGender((short) 1);
+        emp.setJob((short) 1);
+        emp.setEntrydate(LocalDate.of(2024, 4, 25));
         emp.setDeptId(1);
         emp.setCreateTime(now());
         emp.setUpdateTime(now());
@@ -57,15 +57,15 @@ class SpringbootMybatisDemoApplicationTests {
 
     @Test
     // 修改员工信息
-    public void updateEmp(){
+    public void updateEmp() {
         Emp emp = new Emp();
         emp.setId(23);
         emp.setUsername("SwimmingLiu");
         emp.setName("YongjieLiu");
         emp.setImage("SwimmingLiu.jpg");
-        emp.setGender((short)1);
-        emp.setJob((short)3);
-        emp.setEntrydate(LocalDate.of(2024,4,25));
+        emp.setGender((short) 1);
+        emp.setJob((short) 3);
+        emp.setEntrydate(LocalDate.of(2024, 4, 25));
         emp.setDeptId(1);
         emp.setUpdateTime(now());
         empMapper.updateEmp(emp);
@@ -73,9 +73,22 @@ class SpringbootMybatisDemoApplicationTests {
 
     @Test
     // 查询员工信息
-    public void getEmp(){
+    public void getEmp() {
         Integer id = 23;
         Emp emp = empMapper.getEmpById(id);
         System.out.println(emp);
+    }
+
+    @Test
+    // 按条件查询员工信息
+    public void getEmpByCondition() {
+        String name = "Liu";
+        Short gender = (short) 1;
+        LocalDate start = LocalDate.of(2023, 4, 25);
+        LocalDate end = LocalDate.of(2025, 4, 25);
+        List<Emp> empList = empMapper.getEmpByCondition(name, gender, start, end);
+        empList.stream().forEach(emp -> {
+            System.out.println(emp);
+        });
     }
 }
