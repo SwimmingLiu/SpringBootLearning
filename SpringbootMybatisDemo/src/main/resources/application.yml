@@ -20,3 +20,4 @@ mybatis:
   type-aliases-package: com.gouggou.shardingtable.entity    # 实体类所在的位置
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #用于控制台打印sql语句
+    map-underscore-to-camel-case: true

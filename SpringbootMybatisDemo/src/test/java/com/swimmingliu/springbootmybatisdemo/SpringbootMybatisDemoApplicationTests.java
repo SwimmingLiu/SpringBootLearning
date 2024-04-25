@@ -76,5 +76,6 @@ class SpringbootMybatisDemoApplicationTests {
     public void getEmp(){
         Integer id = 23;
         Emp emp = empMapper.getEmpById(id);
+        System.out.println(emp);
     }
 }

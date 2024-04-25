@@ -26,8 +26,22 @@ public interface EmpMapper {
     public void updateEmp(Emp emp);
 
     // 4. 查询员工信息
-    // 方案一： 别名
-    @Select("select id, username, password, name, gender, image, job, entrydate, " +
-            "dept_id deptID, create_time createTime, update_time updateTime from emp where id = #{id}")
+    // 方案一: 别名
+//    @Select("select id, username, password, name, gender, image, job, entrydate, " +
+//            "dept_id deptID, create_time createTime, update_time updateTime from emp where id = #{id}")
+//    public Emp getEmpById(Integer id);
+
+//    // 方案二: Results和Result注解
+//    @Results({
+//            @Result(column = "dept_id",property = "deptId"),
+//            @Result(column = "create_time",property = "createTime"),
+//            @Result(column = "update_time",property = "updateTime"),
+//
+//    })
+//    @Select("select * from emp where id = #{id}")
+//    public Emp getEmpById(Integer id);
+
+    // 方案三: 直接yml配置文件 设置 map-underscore-to-camel-case: true
+    @Select("select * from emp where id = #{id}")
     public Emp getEmpById(Integer id);
 }
