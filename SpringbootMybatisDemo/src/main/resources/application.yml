@@ -1,0 +1,22 @@
+# 数据源
+spring:
+  application:
+    name: employeeDatabase
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+#    dbcp2:
+#      min-idle: 5                                # 数据库连接池的最小维持连接数
+#      initial-size: 5                            # 初始化连接数
+#      max-total: 5                               # 最大连接数
+#      max-wait-millis: 150                       # 等待连接获取的最大超时时间
+
+
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml    # mapper映射文件位置
+  type-aliases-package: com.gouggou.shardingtable.entity    # 实体类所在的位置
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #用于控制台打印sql语句

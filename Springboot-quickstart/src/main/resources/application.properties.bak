@@ -1,0 +1,5 @@
+spring.application.name=Springboot-quickstart
+# ????
+server.port=9090
+# ????
+server.servlet.context-path=/start

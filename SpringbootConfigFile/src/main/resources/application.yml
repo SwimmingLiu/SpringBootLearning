@@ -1,0 +1,6 @@
+email:
+  user: thatdaniel3@outlook.com
+  code: alarm123.
+  host: smtp-mail.outlook.com
+  port: 587
+  auth: true

@@ -1,0 +1,80 @@
+package com.swimmingliu.springbootmybatisdemo;
+
+import com.swimmingliu.springbootmybatisdemo.mapper.EmpMapper;
+import com.swimmingliu.springbootmybatisdemo.mapper.UserMapper;
+import com.swimmingliu.springbootmybatisdemo.pojo.Emp;
+import com.swimmingliu.springbootmybatisdemo.pojo.User;
+import org.apache.ibatis.annotations.Options;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import static java.time.LocalDateTime.now;
+
+@SpringBootTest
+class SpringbootMybatisDemoApplicationTests {
+
+    @Autowired
+    private UserMapper userMapper;
+    @Autowired
+    private EmpMapper empMapper;
+
+    @Test
+    public void getAllUser(){
+        List<User> userList = userMapper.getUser();
+        userList.stream().forEach(user -> {
+            System.out.println(user);
+        });
+    }
+
+    @Test
+    // 删除指定员工信息
+    public void deleteEmp(){
+        Integer id = 21;
+        empMapper.deleteEmpById(id);
+    }
+
+    @Test
+    // 添加员工信息
+    public void addEmp(){
+        Emp emp = new Emp();
+        emp.setUsername("swimmingliu");
+        emp.setName("YongjieLiu");
+        emp.setImage("swimmingliu.jpg");
+        emp.setGender((short)1);
+        emp.setJob((short)1);
+        emp.setEntrydate(LocalDate.of(2024,4,25));
+        emp.setDeptId(1);
+        emp.setCreateTime(now());
+        emp.setUpdateTime(now());
+        empMapper.insertEmp(emp);
+        System.out.println(emp.getId());
+    }
+
+
+    @Test
+    // 修改员工信息
+    public void updateEmp(){
+        Emp emp = new Emp();
+        emp.setId(23);
+        emp.setUsername("SwimmingLiu");
+        emp.setName("YongjieLiu");
+        emp.setImage("SwimmingLiu.jpg");
+        emp.setGender((short)1);
+        emp.setJob((short)3);
+        emp.setEntrydate(LocalDate.of(2024,4,25));
+        emp.setDeptId(1);
+        emp.setUpdateTime(now());
+        empMapper.updateEmp(emp);
+    }
+
+    @Test
+    // 查询员工信息
+    public void getEmp(){
+        Integer id = 23;
+        Emp emp = empMapper.getEmpById(id);
+    }
+}
