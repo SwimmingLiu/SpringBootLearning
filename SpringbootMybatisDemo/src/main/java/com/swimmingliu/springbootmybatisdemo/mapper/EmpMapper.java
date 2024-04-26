@@ -49,8 +49,17 @@ public interface EmpMapper {
     public Emp getEmpById(Integer id);
 
     // 5. 按条件查询员工信息
-    @Select("select * from emp where name like concat('%',#{name},'%') and gender = #{gender} " +
-            "and entrydate between #{start} and #{end}")
-
+//    @Select("select * from emp where name like concat('%',#{name},'%') and gender = #{gender} " +
+//            "and entrydate between #{start} and #{end}")
     public List<Emp> getEmpByCondition(String name, Short gender, LocalDate start, LocalDate end);
+
+    // 6. 动态条件查询员工信息
+
+    public List<Emp> getEmpByConditionDymically(String name, Short gender, LocalDate start, LocalDate end);
+
+    // 7. 动态更新员工信息
+    public void updateEmpDynamically(Emp emp);
+
+    // 8. 按ID号批量删除员工信息
+    public void deleteEmpByIds(List<Integer> ids);
 }

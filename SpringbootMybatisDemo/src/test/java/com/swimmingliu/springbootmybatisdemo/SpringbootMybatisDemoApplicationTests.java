@@ -6,10 +6,13 @@ import com.swimmingliu.springbootmybatisdemo.pojo.Emp;
 import com.swimmingliu.springbootmybatisdemo.pojo.User;
 import org.apache.ibatis.annotations.Options;
 import org.junit.jupiter.api.Test;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static java.time.LocalDateTime.now;
@@ -90,5 +93,41 @@ class SpringbootMybatisDemoApplicationTests {
         empList.stream().forEach(emp -> {
             System.out.println(emp);
         });
+    }
+
+    @Test
+    // 动态查询员工信息
+    public void getEmpByConditionDymically() {
+        String name = "Liu";
+        Short gender = (short) 1;
+//        LocalDate start = LocalDate.of(2023, 4, 25);
+//        LocalDate end = LocalDate.of(2025, 4, 25);
+        List<Emp> empList = empMapper.getEmpByConditionDymically(name, gender, null, null);
+        empList.stream().forEach(emp -> {
+            System.out.println(emp);
+        });
+    }
+
+    @Test
+    // 修改员工信息
+    public void updateEmpDynamically() {
+        Emp emp = new Emp();
+        emp.setId(13);
+        emp.setUsername("fangdongbai123");
+        emp.setName("方东Bai");
+//        emp.setImage("SwimmingLiu.jpg");
+        emp.setGender((short) 2);
+//        emp.setJob((short) 3);
+//        emp.setEntrydate(LocalDate.of(2024, 4, 25));
+//        emp.setDeptId(1);
+        emp.setUpdateTime(now());
+        empMapper.updateEmpDynamically(emp);
+    }
+
+    @Test
+    // 按ID号批量删除员工信息
+    public void deleteEmpByIds(){
+        List<Integer> ids = Arrays.asList(11,12);
+        empMapper.deleteEmpByIds(ids);
     }
 }
