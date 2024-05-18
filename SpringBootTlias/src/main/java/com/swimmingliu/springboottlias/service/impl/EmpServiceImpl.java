@@ -2,6 +2,7 @@ package com.swimmingliu.springboottlias.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.swimmingliu.springboottlias.anno.Logger;
 import com.swimmingliu.springboottlias.mapper.EmpMapper;
 import com.swimmingliu.springboottlias.pojo.Emp;
 import com.swimmingliu.springboottlias.pojo.PageBean;
@@ -34,12 +35,14 @@ public class EmpServiceImpl implements EmpService {
 
     // 按照ID号批量删除员工
     @Override
+    @Logger
     public void deleteEmpByIds(List<Integer> ids) {
         EmpMapper.deleteEmpByIds(ids);
     }
 
     // 添加员工信息
     @Override
+    @Logger
     public void addEmp(Emp emp) {
         emp.setCreateTime(LocalDateTime.now());
         emp.setUpdateTime(LocalDateTime.now());
@@ -55,8 +58,15 @@ public class EmpServiceImpl implements EmpService {
 
     // 按照ID修改员工信息
     @Override
+    @Logger
     public void updateEmpById(Emp emp) {
         emp.setUpdateTime(LocalDateTime.now());
         EmpMapper.updateEmpById(emp);
+    }
+
+    @Override
+    public Emp login(Emp emp) {
+        Emp e = EmpMapper.getEmpByUsernameandPassword(emp);
+        return e;
     }
 }

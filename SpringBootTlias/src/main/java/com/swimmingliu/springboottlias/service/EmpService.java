@@ -1,6 +1,7 @@
 package com.swimmingliu.springboottlias.service;
 
 
+import com.swimmingliu.springboottlias.anno.Logger;
 import com.swimmingliu.springboottlias.pojo.Emp;
 import com.swimmingliu.springboottlias.pojo.PageBean;
 
@@ -20,4 +21,6 @@ public interface EmpService {
     public Emp getEmpById(Integer id);
 
     public void updateEmpById(Emp emp);
+
+    public Emp login(Emp emp);
 }

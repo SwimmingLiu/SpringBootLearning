@@ -5,7 +5,18 @@
 <mapper namespace="com.swimmingliu.springboottlias.mapper.EmpMapper">
 
     <sql id="selectFromEmp">
-        select id, username, password, name, gender, image, job, entrydate, dept_id, create_time, update_time from emp
+        select id,
+               username,
+               password,
+               name,
+               gender,
+               image,
+               job,
+               entrydate,
+               dept_id,
+               create_time,
+               update_time
+        from emp
     </sql>
 
     <insert id="addEmp">
@@ -18,8 +29,8 @@
         <if test="createTime != null">, #{createTime}</if>
         <if test="updateTime != null">, #{updateTime}</if>
         )
-
     </insert>
+
     <update id="updateEmpById">
         update emp
         <set>
@@ -33,6 +44,7 @@
         </set>
         where id = #{id}
     </update>
+
     <delete id="deleteEmpByIds">
         delete from emp
         where id in
@@ -40,6 +52,7 @@
             #{id}
         </foreach>
     </delete>
+
     <select id="getEmpByCondition" resultType="com.swimmingliu.springboottlias.pojo.Emp">
         <include refid="selectFromEmp"></include>
         <where>
@@ -53,8 +66,9 @@
                 and entrydate between #{begin} and #{end}
             </if>
         </where>
-        order by update_time desc;
+        order by update_time desc
     </select>
+
     <select id="getEmpById" resultType="com.swimmingliu.springboottlias.pojo.Emp">
         <include refid="selectFromEmp"></include>
         where id = #{id}
