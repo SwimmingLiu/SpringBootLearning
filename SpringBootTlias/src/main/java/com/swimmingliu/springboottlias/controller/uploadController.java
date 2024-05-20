@@ -1,7 +1,7 @@
 package com.swimmingliu.springboottlias.controller;
 
-import com.swimmingliu.springboottlias.pojo.Result;
-import com.swimmingliu.springboottlias.utils.QiNiuCloudOSS;
+import com.swimmingliu.springboottliaspojo.pojo.Result;
+import com.swimmingliu.springboottliasutils.utils.QiNiuCloudOSS;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

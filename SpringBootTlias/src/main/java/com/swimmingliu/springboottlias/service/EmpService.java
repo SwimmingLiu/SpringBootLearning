@@ -2,8 +2,8 @@ package com.swimmingliu.springboottlias.service;
 
 
 import com.swimmingliu.springboottlias.anno.Logger;
-import com.swimmingliu.springboottlias.pojo.Emp;
-import com.swimmingliu.springboottlias.pojo.PageBean;
+import com.swimmingliu.springboottliaspojo.pojo.Emp;
+import com.swimmingliu.springboottliaspojo.pojo.PageBean;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

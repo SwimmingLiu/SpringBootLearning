@@ -1,8 +1,8 @@
 package com.swimmingliu.springboottlias.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
-import com.swimmingliu.springboottlias.pojo.Result;
-import com.swimmingliu.springboottlias.utils.JwtUtils;
+import com.swimmingliu.springboottliaspojo.pojo.Result;
+import com.swimmingliu.springboottliasutils.utils.JwtUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;

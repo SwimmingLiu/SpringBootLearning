@@ -3,12 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.swimmingliu</groupId>
+        <artifactId>SpringBootParent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../SpringBootParent/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.swimmingliu</groupId>
     <artifactId>SpringBootTlias</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SrpingBootTlias</name>
@@ -59,46 +58,6 @@
             <version>2.1.0</version>
         </dependency>
 
-        <!--七牛云-->
-        <dependency>
-            <groupId>com.qiniu</groupId>
-            <artifactId>qiniu-java-sdk</artifactId>
-            <version>7.15.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>3.14.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.5</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.qiniu</groupId>
-            <artifactId>happy-dns-java</artifactId>
-            <version>0.1.6</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <!--七牛云-->
-
-        <!--jwt-->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.12.5</version>
-        </dependency>
-        <!--jwt-->
-
         <!--fastJSON-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -113,7 +72,16 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!--AOP-->
-
+        <dependency>
+            <groupId>com.swimmingliu</groupId>
+            <artifactId>SpringBootTliasPojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+              <groupId>com.swimmingliu</groupId>
+            <artifactId>SpringBootTliasUtils</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

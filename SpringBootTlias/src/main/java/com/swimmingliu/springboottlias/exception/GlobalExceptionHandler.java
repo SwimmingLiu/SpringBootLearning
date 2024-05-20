@@ -1,7 +1,7 @@
 package com.swimmingliu.springboottlias.exception;
 
 
-import com.swimmingliu.springboottlias.pojo.Result;
+import com.swimmingliu.springboottliaspojo.pojo.Result;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

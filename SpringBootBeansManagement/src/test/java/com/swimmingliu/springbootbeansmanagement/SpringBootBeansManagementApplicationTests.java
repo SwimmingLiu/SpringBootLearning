@@ -1,6 +1,9 @@
 package com.swimmingliu.springbootbeansmanagement;
 
 import com.swimmingliu.springbootbeansmanagement.controller.DeptController;
+import com.swimmingliu.springbootultilsconfiguration.HeaderGenerator;
+import com.swimmingliu.springbootultilsconfiguration.HeaderParser;
+import com.swimmingliu.springbootultilsconfiguration.TokenParser;
 import lombok.extern.slf4j.Slf4j;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -62,6 +65,16 @@ class SpringBootBeansManagementApplicationTests {
     public void testGetBean2() {
         Object saxReader = applicationContext.getBean("reader");
         System.out.println(saxReader);
+    }
+
+    @Test
+    public void testTokenParse() {
+        System.out.println(applicationContext.getBean(TokenParser.class));
+    }
+
+    @Test
+    public void testHeaderGenerator() {
+        System.out.println(applicationContext.getBean(HeaderParser.class));
     }
 
 }

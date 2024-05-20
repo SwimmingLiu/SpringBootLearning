@@ -2,8 +2,8 @@ package com.swimmingliu.springboottlias.filter;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.swimmingliu.springboottlias.pojo.Result;
-import com.swimmingliu.springboottlias.utils.JwtUtils;
+import com.swimmingliu.springboottliaspojo.pojo.Result;
+import com.swimmingliu.springboottliasutils.utils.JwtUtils;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;

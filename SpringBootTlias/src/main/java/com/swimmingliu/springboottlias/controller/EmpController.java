@@ -1,8 +1,8 @@
 package com.swimmingliu.springboottlias.controller;
 
-import com.swimmingliu.springboottlias.pojo.Emp;
-import com.swimmingliu.springboottlias.pojo.PageBean;
-import com.swimmingliu.springboottlias.pojo.Result;
+import com.swimmingliu.springboottliaspojo.pojo.Emp;
+import com.swimmingliu.springboottliaspojo.pojo.PageBean;
+import com.swimmingliu.springboottliaspojo.pojo.Result;
 import com.swimmingliu.springboottlias.service.EmpService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

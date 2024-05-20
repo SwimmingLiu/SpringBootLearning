@@ -1,6 +1,6 @@
 package com.swimmingliu.springboottlias;
 
-import com.swimmingliu.springboottlias.utils.QiNiuCloudOSS;
+import com.swimmingliu.springboottliasutils.utils.QiNiuCloudOSS;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class QiNiuOssTest {

@@ -1,6 +1,6 @@
 package com.swimmingliu.springboottlias.mapper;
 
-import com.swimmingliu.springboottlias.pojo.OperateLog;
+import com.swimmingliu.springboottliaspojo.pojo.OperateLog;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 

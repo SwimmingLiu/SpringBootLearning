@@ -53,7 +53,7 @@
         </foreach>
     </delete>
 
-    <select id="getEmpByCondition" resultType="com.swimmingliu.springboottlias.pojo.Emp">
+    <select id="getEmpByCondition" resultType="com.swimmingliu.springboottliaspojo.pojo.Emp">
         <include refid="selectFromEmp"></include>
         <where>
             <if test="name != null and name != ''">
@@ -69,7 +69,7 @@
         order by update_time desc
     </select>
 
-    <select id="getEmpById" resultType="com.swimmingliu.springboottlias.pojo.Emp">
+    <select id="getEmpById" resultType="com.swimmingliu.springboottliaspojo.pojo.Emp">
         <include refid="selectFromEmp"></include>
         where id = #{id}
     </select>

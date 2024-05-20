@@ -2,7 +2,7 @@ package com.swimmingliu.springboottlias.mapper;
 
 import com.github.pagehelper.Page;
 import com.swimmingliu.springboottlias.anno.Logger;
-import com.swimmingliu.springboottlias.pojo.Emp;
+import com.swimmingliu.springboottliaspojo.pojo.Emp;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

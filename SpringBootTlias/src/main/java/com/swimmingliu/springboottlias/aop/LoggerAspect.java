@@ -2,8 +2,8 @@ package com.swimmingliu.springboottlias.aop;
 
 import com.alibaba.fastjson.JSONObject;
 import com.swimmingliu.springboottlias.mapper.OperateLogMapper;
-import com.swimmingliu.springboottlias.pojo.OperateLog;
-import com.swimmingliu.springboottlias.utils.JwtUtils;
+import com.swimmingliu.springboottliaspojo.pojo.OperateLog;
+import com.swimmingliu.springboottliasutils.utils.JwtUtils;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;

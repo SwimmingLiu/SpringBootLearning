@@ -1,7 +1,8 @@
 package com.swimmingliu.springboottlias.service;
 
 import com.swimmingliu.springboottlias.anno.Logger;
-import com.swimmingliu.springboottlias.pojo.Dept;
+import com.swimmingliu.springboottliaspojo.pojo.Dept;
+
 
 import java.util.List;
 

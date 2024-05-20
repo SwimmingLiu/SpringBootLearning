@@ -1,7 +1,7 @@
 package com.swimmingliu.springboottlias.controller;
 
-import com.swimmingliu.springboottlias.pojo.Dept;
-import com.swimmingliu.springboottlias.pojo.Result;
+import com.swimmingliu.springboottliaspojo.pojo.Dept;
+import com.swimmingliu.springboottliaspojo.pojo.Result;
 import com.swimmingliu.springboottlias.service.DeptService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
